@@ -1,4 +1,4 @@
-# MCP Server Beginners example
+# MCP Server Beginner example
 
 ## Project Overview
 
