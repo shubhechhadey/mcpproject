@@ -90,7 +90,40 @@ Example (from CLI):
 mcp call get_alerts --state=CA
 ```
 
+### Using with Claude Desktop
+You can also use the weather alerts tool in Claude Desktop, as shown below:
+
+![Weather alerts in Claude Desktop](screeshots/claude_desktop_with_mcp_server.png)
+
+*Weather alerts for California displayed in Claude Desktop using the `get_alerts` tool.*
+
+### Claude Desktop Configuration
+
+To call this MCP server from Claude Desktop, you need to update your `claude_desktop_config.json` file to include the server
+For example:
+
+```json
+{
+  {
+  "mcpServers": {
+    "weather": {
+      "command": "C:\\Users\\shubhechhadey\\.local\\bin\\uv.EXE",
+      "args": [
+        "run",
+        "--with",
+        "mcp[cli]",
+        "mcp",
+        "run",
+        "C:\\Users\\shubhechhadey\\projects\\mcpproject\\server\\weather.py"
+      ]
+    }
+  }
+}
+}
+```
+Attached is the screenshot: ![Weather alerts in Claude Desktop](screeshots/claude_desktop_configuration.png)
+
 ---
 
 ## Notes
-- All commands use `uv` for consistency and reproducibility.
+- All commands use `uv`
